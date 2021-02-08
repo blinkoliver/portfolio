@@ -12,6 +12,7 @@ node_modules
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -20,3 +21,6 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+   # "start": "react-app-rewired start",
+   #  "build": "react-app-rewired build",
+   #  "test": "react-app-rewired test"

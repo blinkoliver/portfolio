@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const About = (props) => {
   const { data } = props;
@@ -6,6 +7,7 @@ const About = (props) => {
     var { name, bio, image, phone, email, resumeDownload } = data;
     var { street, city, state, zip } = data.address;
   }
+  const { t } = useTranslation();
 
   return (
     <section id="about">
@@ -18,8 +20,7 @@ const About = (props) => {
           />
         </div>
         <div className="nine columns main-col">
-          <h2>About Me</h2>
-
+          <h2>{t("about_me")}</h2>
           <p>{bio}</p>
           <div className="row">
             <div className="columns contact-details">

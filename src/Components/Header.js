@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 
 const Header = (props) => {
   const { data } = props;
@@ -13,6 +15,10 @@ const Header = (props) => {
       </li>
     ));
   }
+  const { i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <header id="home">
@@ -55,6 +61,12 @@ const Header = (props) => {
             </a>
           </li>
         </ul>
+        <button type="button" onClick={() => changeLanguage("en")}>
+          en
+        </button>
+        <button type="button" onClick={() => changeLanguage("ru")}>
+          ru
+        </button>
       </nav>
       <div className="row banner">
         <div className="banner-text">
